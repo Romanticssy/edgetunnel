@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fantahw0821 节点对接</title>
+</head>
+<body>
+  <h1>Fantahw0821 节点测试</h1>
+  <button id="btn">获取 API 数据</button>
+  <pre id="output"></pre>
+
+  <script>
+    document.getElementById("btn").onclick = async () => {
+      const res = await fetch("/api");
+      const text = await res.text();
+      document.getElementById("output").textContent = text;
+    };
+  </script>
+</body>
+</html>
